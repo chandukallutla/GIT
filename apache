@@ -1,0 +1,14 @@
+FROM ubuntu:latest
+RUN sudo apt-get update
+RUN sudo apt-get upgrade -y
+RUN sudo apt-get install apache2
+CMD systemctl start apache2
+CMD systemctl status apache2
+CMD systemctl enable apache2
+EXPOSE 80
+
+
+
+
+
+
