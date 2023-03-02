@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+RUN yum update
+RUN yum upgrade -y
+RUN yum install httpd
+CMD systemctl start httpd
+CMD systemctl status httpd
+CMD systemctl enable httpd
+EXPOSE 80
